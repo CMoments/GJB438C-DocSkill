@@ -26,13 +26,26 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
 
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: Install dependencies
+        run: npm install
+        working-directory: blog
+
+      - name: Clean & Generate site
+        run: npx hexo clean && npx hexo generate
+        working-directory: blog
+
       - name: Setup Pages
         uses: actions/configure-pages@v5
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: blog
+          path: blog/public
 
       - name: Deploy to GitHub Pages
         id: deployment
