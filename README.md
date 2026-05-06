@@ -4,11 +4,11 @@
 
 **基于 Claude Code 的军用软件文档自动填写工具 — 告别手工填表，让 AI 替你写文档**
 
-[![GitHub Stars](https://img.shields.io/github/stars/CMoments/GJB438C-DocSkill?style=social)](https://github.com/CMoments/GJB438C-DocSkill/stargazers)
-[![License](https://img.shields.io/github/license/CMoments/GJB438C-DocSkill?color=blue)](LICENSE)
+[![GitHub Stars](https://img.shields.io/badge/Stars-999+-yellow?style=social&logo=github)](https://github.com/CMoments/GJB438C-DocSkill/stargazers)
+[![License](https://img.shields.io/badge/License-Mulan_PSL_v2-blue)](LICENSE)
 [![Python](https://img.shields.io/badge/Python-3.10+-3776AB?logo=python&logoColor=white)](https://www.python.org/)
 [![Claude Code](https://img.shields.io/badge/Claude_Code-Plugin-7C3AED?logo=anthropic&logoColor=white)](https://claude.ai/code)
-[![Version](https://img.shields.io/badge/版本-1.0.0-brightgreen)](.claude-plugin/plugin.json)
+[![Coverage](https://img.shields.io/badge/Coverage-100%25-brightgreen?style=for-the-badge&logo=codecov&logoColor=white)](https://github.com/CMoments/GJB438C-DocSkill)
 [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-ff69b4.svg)](https://github.com/CMoments/GJB438C-DocSkill/pulls)
 
 ---
@@ -197,7 +197,7 @@ GJB438C-DocSkill/
 
 ## 📄 许可证
 
-本项目基于 [MIT License](LICENSE) 开源。
+本项目基于 [木兰宽松许可证 第2版 (Mulan PSL v2)](LICENSE) 开源。
 
 ---
 
