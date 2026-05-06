@@ -1,0 +1,14 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(npm install:*)",
+      "Bash(hexo clean:*)",
+      "Bash(hexo generate:*)",
+      "Bash(npm uninstall:*)",
+      "Bash(timeout 3 bash -c 'while ! curl -s http://localhost:4000 > /dev/null; do sleep 0.5; done')",
+      "Bash(hexo server:*)",
+      "Bash(ipconfig /all)",
+      "Bash(getmac:*)"
+    ]
+  }
+}

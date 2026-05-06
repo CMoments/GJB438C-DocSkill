@@ -1,0 +1,73 @@
+{
+  "project": {
+    "name": {
+      "type": "original_text",
+      "replacement_pattern": "外部型号+产品名称（示例：SAMPLE-智能终端）",
+      "content": "编译器"
+    },
+    "short_name": {
+      "type": "original_text",
+      "replacement_pattern": "项目简称（示例：SAMPLE）",
+      "content": "BYQ"
+    },
+    "version": {
+      "type": "original_text",
+      "replacement_pattern": "版本号（示例：V1.0）",
+      "content": "V2.0"
+    },
+    "company": {
+      "type": "original_text",
+      "replacement_pattern": "开发单位名称（示例：XXXXXXXX公司）",
+      "content": "测试大学"
+    },
+    "department": {
+      "type": "original_text",
+      "replacement_pattern": "部门名称（示例：软件研发部）",
+      "content": "测试学院"
+    }
+  },
+  "document": {
+    "id": {
+      "type": "original_text",
+      "replacement_pattern": "文档编号（示例：TN/SAMPLE-DO-DS-V1.0）",
+      "content": "BYQ-SRS-V2.0"
+    },
+    "title": {
+      "type": "original_text",
+      "replacement_pattern": "文档标题（示例：软件需求规格说明）",
+      "content": "Software Requirements Specification"
+    },
+    "classification": {
+      "type": "original_text",
+      "replacement_pattern": "密级（示例：内部）",
+      "content": "内部"
+    },
+    "phase": {
+      "type": "original_text",
+      "replacement_pattern": "阶段（示例：设计阶段）",
+      "content": "设计阶段"
+    },
+    "date": {
+      "type": "original_text",
+      "replacement_pattern": "日期（示例：YYYY-MM-DD）",
+      "content": "2026-03-01"
+    }
+  },
+  "content": {
+    "overview": {
+      "type": "background_information",
+      "replacement_pattern": "项目概述（示例：本项目用于……）",
+      "content": "本项目用于教学和研究目的的编译器开发"
+    },
+    "scope": {
+      "type": "background_information",
+      "replacement_pattern": "项目范围（示例：包含A/B/C模块）",
+      "content": "词法分析模块、语法分析模块、语义分析模块、代码生成模块"
+    },
+    "features": {
+      "type": "background_information",
+      "replacement_pattern": "功能特性（示例：功能特性1、功能特性2、功能特性3）",
+      "content": "词法分析、语法分析、语义分析、代码生成、代码优化、错误处理"
+    }
+  }
+}

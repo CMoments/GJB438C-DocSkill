@@ -1,0 +1,10 @@
+{
+  "permissions": {
+    "allow": [
+      "mcp__zai-mcp-server__analyze_image",
+      "WebSearch",
+      "Bash(echo:*)",
+      "Bash(set)"
+    ]
+  }
+}
