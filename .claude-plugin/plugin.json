@@ -1,14 +1,11 @@
 {
   "name": "gjb438c-doc-filler",
-  "version": "1.0.0",
   "description": "GJB 438C 军用软件文档自动填写工具集，支持 [08] 软件需求规格说明书和 [10] 软件概要设计说明书模板",
   "author": {
     "name": "SRS-Tool"
   },
-  "skills": [
-    "skills/word-fillter-438c-08/SKILL.md",
-    "skills/word-fillter-438c-10/SKILL.md"
-  ],
+  "homepage": "https://github.com/CMoments/GJB438C-DocSkill",
+  "repository": "https://github.com/CMoments/GJB438C-DocSkill",
   "keywords": [
     "gjb438c",
     "docx",
@@ -16,6 +13,5 @@
     "sdd",
     "文档填写",
     "军用标准"
-  ],
-  "category": "productivity"
+  ]
 }
