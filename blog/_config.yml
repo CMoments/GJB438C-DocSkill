@@ -13,8 +13,8 @@ timezone: ''
 
 # URL
 ## Set your site url here. For example, if you use GitHub Page, set url as 'https://username.github.io/project'
-url: https://cmoments.github.io/SRS-Tool
-root: /SRS-Tool/
+url: https://cmoments.github.io/GJB438C-DocSkill/
+root: /GJB438C-DocSkill/
 color_scheme: light
 permalink: :year/:month/:day/:title/
 permalink_defaults:
@@ -104,9 +104,8 @@ theme: cactus
 ## Docs: https://hexo.io/docs/one-command-deployment
 deploy:
   type: git
-  repo: https://github.com/CMoments/SRS-Tool.git
+  repo: https://github.com/CMoments/GJB438C-DocSkill.git
  # https://bitbucket.org/JohnSmith/johnsmith.bitbucket.io
-  branch: gh-pages
+  branch: main  
   # message: [message]
-
 
