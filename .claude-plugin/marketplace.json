@@ -9,7 +9,7 @@
   "plugins": [
     {
       "name": "gjb438c-doc-filler",
-      "source": ".",
+      "source": "https://github.com/CMoments/GJB438C-DocSkill",
       "description": "GJB 438C 文档填写工具 — 支持软件需求规格说明书 [08] 和软件概要设计说明书 [10] 模板",
       "version": "1.0.0",
       "keywords": [

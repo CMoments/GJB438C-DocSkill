@@ -77,13 +77,13 @@
 **方式一：直接安装 Plugin**（推荐 ✅）
 
 ```bash
-claude plugin add github:CMoments/GJB438C-DocSkill
+claude plugin add CMoments/GJB438C-DocSkill
 ```
 
 或在 Claude Code 对话中执行：
 
 ```
-/plugin add github:CMoments/GJB438C-DocSkill
+/plugin add CMoments/GJB438C-DocSkill
 ```
 
 **方式二：通过 Marketplace 添加**
