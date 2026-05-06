@@ -1,16 +1,22 @@
 {
+  "$schema": "https://anthropic.com/claude-code/marketplace.schema.json",
   "name": "gjb438c-tools",
+  "description": "GJB 438C 军用软件文档自动填写工具集 Marketplace",
   "owner": {
     "name": "SRS-Tool"
-  },
-  "metadata": {
-    "description": "GJB 438C 军用软件文档自动填写工具集 Marketplace"
   },
   "plugins": [
     {
       "name": "gjb438c-doc-filler",
-      "source": "https://github.com/CMoments/GJB438C-DocSkill",
       "description": "GJB 438C 文档填写工具 — 支持软件需求规格说明书 [08] 和软件概要设计说明书 [10] 模板",
+      "author": {
+        "name": "SRS-Tool"
+      },
+      "category": "productivity",
+      "source": {
+        "source": "url",
+        "url": "https://github.com/CMoments/GJB438C-DocSkill"
+      },
       "version": "1.0.0",
       "keywords": [
         "gjb438c",
@@ -19,8 +25,7 @@
         "sdd",
         "文档填写",
         "军用标准"
-      ],
-      "category": "productivity"
+      ]
     }
   ]
 }
