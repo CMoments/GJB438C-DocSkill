@@ -1,5 +1,6 @@
 nav:
   home: /
   about: /about/
-  articles: /archives/
-  history: /history/
+  milestone: /history/
+
+social_links: false
