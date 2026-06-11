@@ -1,5 +1,5 @@
 ---
-title: Tools⚒️：Claude-code-skill
+title: Tools⚒️：安装Claude-code-skill指南
 date: 2026-02-13 15:07:00
 tags:
 ---
