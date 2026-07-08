@@ -76,7 +76,8 @@
 
 **方式一：直接安装 Plugin**（推荐 ✅）
 以Claude为例：
-已安装并完成配置后：[Claude Code CLI](https://claude.ai/code) 
+
+[Claude Code CLI](https://claude.ai/code) 需安装并完成配置：
 
 ```bash
 claude plugin add CMoments/GJB438C-DocSkill
