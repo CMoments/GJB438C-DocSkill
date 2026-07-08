@@ -69,12 +69,15 @@
 
 ### 前置要求
 
-- [Claude Code CLI](https://claude.ai/code) 已安装并登录
+- 任意支持Agent Skill的AI工具
 - Python 3.10+（由 skill 自动调用）
 
 ### 安装
 
 **方式一：直接安装 Plugin**（推荐 ✅）
+以Claude为例：
+
+[Claude Code CLI](https://claude.ai/code) 需安装并完成配置：
 
 ```bash
 claude plugin add CMoments/GJB438C-DocSkill
