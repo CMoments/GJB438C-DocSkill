@@ -8,7 +8,7 @@
   "plugins": [
     {
       "name": "gjb438c-doc-filler",
-      "description": "GJB 438C 文档填写工具 — 支持软件需求规格说明书 [08] 和软件概要设计说明书 [10] 模板",
+      "description": "GJB 438C 文档填写工具 — 支持软件需求规格说明书 [5.10] 和软件设计说明书 [5.11] 模板",
       "author": {
         "name": "SRS-Tool"
       },

@@ -1,0 +1,431 @@
+{
+  "template_info": {
+    "name": "GJB 438C 软件需求规格说明书",
+    "file": "[10][SRS] 软件需求规格说明-438C-2021.docx",
+    "encoding": "gbk",
+    "sections": []
+  },
+  "structure": {
+    "1": {
+      "title": "范围",
+      "placeholders": [
+        {
+          "id": "1.1",
+          "name": "标识",
+          "type": "content_generation",
+          "description": "本条应描述本文档所适用软件的完整标识",
+          "replacement_pattern": "本条应描述本文档所适用软件的完整标识，适用时，包括其标识号、名称、缩略名、版本号和发布号。",
+          "content": "本文档适用于编译器软件系统（BYQ），标识号为BYQ-SRS-V2.0，版本号为V2.0，发布号为Release 1。该软件由四川大学网络空间安全学院开发，用于教学和研究目的。"
+        },
+        {
+          "id": "1.2",
+          "name": "系统概述",
+          "type": "content_generation",
+          "description": "本条应概述本文档所适用软件的用途",
+          "replacement_pattern": "请用2-3段话描述软件的主要功能、应用场景、开发背景、运行现场和相关方。本条应概述本文档所适用软件的用途。它还应描述软件的一般特性",
+          "content": "本项目是一个用于教学和研究目的的编译器系统，主要功能包括词法分析、语法分析、语义分析、代码生成、代码优化和错误处理。该编译器能够将高级编程语言源代码转换为目标机器的汇编代码或中间代码。\n\n该软件应用于计算机科学教育和编程语言理论研究场景，帮助学生和研究人员深入理解编译原理和技术。开发背景源于四川大学网络空间安全学院的教学需求，旨在提供一个结构清晰、功能完整的编译器实现示例。软件运行在Windows和Linux操作系统环境下，为计算机专业学生和编程语言研究人员提供服务。\n\n软件的主要特性包括：支持多种源语言特性、生成高效的目标代码、提供详细的错误诊断信息、模块化设计便于扩展和维护。该编译器采用标准的编译流程，包括前端分析（词法、语法、语义分析）和后端生成（代码生成和优化）两个主要阶段。"
+        },
+        {
+          "id": "1.3",
+          "name": "文档概述",
+          "type": "content_generation",
+          "description": "本文档的用途和内容",
+          "replacement_pattern": "本条应概述本文档的用途和内容，并描述与它的使用有关的保密性方面的要求。",
+          "content": "本文档规定了编译器软件系统的需求规格，包括功能需求、性能需求、接口需求、环境需求和质量需求等方面。文档内容涵盖软件的范围、引用文档、详细需求说明、合格性规定、需求可追踪性和相关注释。\n\n本文档为软件的设计、开发、测试和验收提供依据，适用于软件开发人员、测试人员、项目管理人员和相关技术人员使用。本文档为内部文档，仅限四川大学网络空间安全学院内部使用，不得对外传播。"
+        }
+      ]
+    },
+    "2": {
+      "title": "引用文档",
+      "type": "content_generation",
+      "description": "列出引用的标准和规范",
+      "replacement_pattern": "本章应列出引用文档的编号、标题、编写单位、修订版及日期",
+      "content": "Test-引用文档",
+      "tables": [
+        {
+          "table_id": "reference_documents",
+          "locator_rows": [
+            ["序号", "名称", "版本", "发布日期", "来源"]
+          ],
+          "data_start_row": 1,
+          "preserve_tail_rows": 0,
+          "columns": ["number", "name", "version", "release_date", "source"],
+          "rows": [
+            {
+              "number": "1",
+              "name": "《GB/T 0018》",
+              "version": "0028",
+              "release_date": "2008-12-01",
+              "source": "国家质量监督检验检疫总局"
+            },
+            {
+              "number": "2",
+              "name": "《GB/T 0028》",
+              "version": "0028",
+              "release_date": "2008-12-01",
+              "source": "国家质量监督检验检疫总局"
+            }
+          ]
+        }
+      ]
+    },
+    "3": {
+      "title": "需求",
+      "placeholders": [
+        {
+          "id": "3.1",
+          "name": "要求的状态和方式",
+          "type": "content_generation",
+          "description": "软件运行状态（正常、维护、调试等）",
+          "replacement_pattern": "如果要求软件在多种状态或方式下运行，并且不同的状态或方式具有不同的需求，则应标识和定义每一状态和方式。状态和方式的例子包括：空闲、就绪、活动、事后分析、训练、降级、紧急情况、后备、战时和平时等。可以仅用状态描述软件也可以仅用方式、用方式中的状态、状态中的方式、或其他有效的方式描述软件。如果不需要多种状态和方式，应如实陈述，而不需要进行人为的区分：如果需要多种状态和/或方式，应使本规格说明中的每个需求或每组需求与这些状态和方式相对应，对应关系可以在本条或本条所引用的附录中，通过表格或其他方式加以指明，也可以在该需求出现的章条中加以说明。",
+          "content": "本编译器软件在单一状态下运行，不需要区分多种状态或方式。软件在正常工作状态下执行编译任务，包括源代码输入、编译处理和目标代码输出等所有功能。软件不支持维护模式、降级模式或紧急模式等特殊状态。",
+          "subsections":{
+            "3.1.1": {
+                "name": "正常状态",
+                "content": "软件在正常状态下运行，执行编译任务，处理用户输入的源代码文件，并生成目标代码文件。软件在正常状态下应满足所有功能需求、性能需求和质量需求。"
+             },
+             "3.1.2": {
+                "name": "维护状态",
+                "content": "软件在维护状态下运行，进行错误修复、功能改进或性能优化等维护活动。软件在维护状态下可能不满足所有功能需求和性能需求，但应保证基本的稳定性和可靠性。"
+             },
+             "3.1.3": {
+                "name": "调试状态",
+                "content": "软件在调试状态下运行，开发人员进行调试和测试活动。软件在调试状态下可能不满足所有功能需求和性能需求，但应提供足够的调试信息和日志记录功能，帮助开发人员定位和修复问题。"
+             }
+          }
+        },
+        {
+          "id": "3.2",
+          "name": "软件能力需求",
+          "type": "content_generation",
+          "description": "详细说明软件的各项功能需求",
+          "generation_prompt": "请为软件设计3-8个核心功能模块，每个模块包括：功能名称、功能描述、输入、输出、性能要求、约束条件",
+          "content": "Test 3.2",
+          "subsections":{
+              "3.2.1": {
+                  "name": "词法分析模块",
+                  "content": "功能名称：词法分析模块\n功能描述：将源代码文本分解为记号序列，识别语言的基本元素如关键字、标识符、常量等。\n输入：源代码文件\n输出：记号序列\n性能要求：处理10000行以内的源代码，分析时间不超过5秒\n约束条件：支持UTF-8编码的文本文件，需处理注释和空白字符"
+              },
+              "3.2.2": {
+                  "name": "语法分析模块",
+                  "content": "功能名称：语法分析模块\n功能描述：根据语言的语法规则分析记号序列，构建抽象语法树（AST）。\n输入：词法分析模块输出的记号序列\n输出：抽象语法树（AST）\n性能要求：处理10000行以内的源代码，分析时间不超过5秒\n约束条件：支持递归下降解析，需处理语法错误并提供错误信息"
+              },
+              "3.2.3": {
+                  "name": "语义分析模块",
+                  "content": "功能名称：语义分析模块\n功能描述：检查程序的语义正确性，包括类型检查、作用域分析和符号表管理。\n输入：语法分析模块输出的抽象语法树（AST）\n输出：标注后的抽象语法树和符号表\n性能要求：处理10000行以内的源代码，分析时间不超过5秒\n约束条件：支持基本类型和用户定义类型，需处理语义错误并提供错误信息"
+              }
+          }
+        },
+        {
+          "id": "3.3",
+          "name": "软件外部接口需求",
+          "type": "content_generation",
+          "description": "软件与外部实体的接口",
+          "generation_prompt": "请列出软件的所有外部接口，包括：接口名称、连接实体、接口类型、数据格式、通信方式、协议",
+          "content": "本编译器软件为独立的离线工具，不需要与外部实体（如网络服务、数据库、远程服务器等）进行接口。软件仅通过文件系统读取源代码文件，并将编译结果输出到文件系统，不涉及外部接口需求。",
+          "subsections": {
+              "3.3.1": {
+                  "name": "用户接口",
+                  "replacement_pattern": "本条应描述软件与用户之间的接口需求",
+                  "content": "本软件提供命令行界面（CLI）供用户使用，用户通过命令行参数指定源代码文件路径、输出文件路径和编译选项等。软件不提供图形用户界面（GUI）或其他交互方式。"
+              },
+              "3.3.2": {
+                  "name": "外部系统接口",
+                  "replacement_pattern": "本条应描述软件与外部系统之间的接口需求",
+                  "content": "本软件不需要与任何外部系统进行接口，不涉及网络通信、数据库访问或远程服务调用等外部系统接口需求。"
+              }
+          }
+        },
+        {
+          "id": "3.4",
+          "name": "软件内部接口需求",
+          "type": "content_generation",
+          "description": "内部接口需求",
+          "replacement_pattern": "本条应描述施加于软件内部接口的需求",
+          "content": "编译器各模块之间的内部接口需求如下：\n\n1. 词法分析器与语法分析器接口：词法分析器通过记号序列向语法分析器传递识别的词法单元，接口数据结构包括记号类型、记号值、行号和列号等信息。\n\n2. 语法分析器与语义分析器接口：语法分析器将构建的抽象语法树传递给语义分析器，接口数据结构为树形结构，每个节点包含语法成分类型、属性信息和子节点指针。\n\n3. 语义分析器与代码生成器接口：语义分析器将标注后的抽象语法树和符号表传递给代码生成器，接口需包含类型信息、存储分配信息和中间表示。\n\n4. 代码生成器与代码优化器接口：代码生成器将初始目标代码或中间代码传递给优化器，接口需支持控制流图、数据流分析等中间表示。\n\n5. 错误处理模块接口：所有模块通过统一的错误处理接口报告错误，错误信息包括错误级别、错误代码、位置信息和描述信息。",
+          "subsections" : {
+              "3.4.1": {
+                  "name": "模块间接口规范",
+                  "replacement_pattern": "本条应描述软件内部模块间接口的规范要求",
+                  "content": "编译器内部模块间接口规范如下：\n\n1. 接口定义：每个模块的输入输出数据结构和函数调用约定需明确规定，使用统一的数据格式和命名规范。\n\n2. 错误处理：所有模块通过统一的错误处理机制报告错误，错误信息需包含错误级别、错误代码、位置信息和描述信息。\n\n3. 数据传递：模块间数据传递应采用高效的数据结构，避免不必要的数据复制，支持指针或引用传递。\n\n4. 模块解耦：各模块应尽量解耦，减少直接依赖关系，通过接口抽象实现模块间通信。\n\n5. 接口文档：每个模块的接口需有详细的文档说明，包括输入输出参数、返回值、异常情况和使用示例。"
+              },
+              "3.4.2": {
+                  "name": "模块内部接口规范",
+                  "replacement_pattern": "本条应描述软件内部模块内接口的规范要求",
+                  "content": "编译器内部模块内接口规范如下：\n\n1. 函数接口：模块内部函数需遵循统一的命名规范和参数传递方式，函数应有明确的输入输出定义和返回值。\n\n2. 数据结构接口：模块内部使用的数据结构需有清晰的定义和访问方法，支持封装和抽象，避免直接暴露内部实现细节。\n\n3. 错误处理接口：模块内部函数应通过统一的错误处理机制报告错误，错误信息需包含错误级别、错误代码、位置信息和描述信息。\n\n4. 模块内通信：模块内部组件之间的通信应采用高效的调用方式，支持函数调用、事件通知或消息传递等机制。\n\n5. 内部文档：模块内部接口需有详细的文档说明，包括函数定义、数据结构说明、使用示例和异常情况。"
+              }
+          }
+        },
+        {
+          "id": "3.5",
+          "name": "软件内部数据需求",
+          "type": "content_generation",
+          "description": "内部数据需求",
+          "replacement_pattern": "本条应描述施加于软件内部数据的需求",
+          "content": "编译器内部数据结构需求如下：\n\n1. 符号表：用于存储标识符的信息，包括名称、类型、作用域、存储位置等属性。符号表需支持快速查找、插入和删除操作，采用哈希表或平衡二叉树实现。\n\n2. 抽象语法树（AST）：表示源程序的语法结构，每个节点代表一个语法成分。AST需支持遍历、修改和标注操作，节点类型包括表达式、语句、声明等。\n\n3. 中间代码表示：采用三地址码或静态单赋值形式（SSA）作为中间表示，需支持指令序列的生成、优化和转换。\n\n4. 词法记号流：存储词法分析器产生的记号序列，每个记号包含类型、值、位置等信息。\n\n5. 类型系统：维护语言支持的类型信息，包括基本类型、复合类型和用户自定义类型，需支持类型检查和类型转换。\n\n6. 错误队列：存储编译过程中检测到的所有错误和警告信息，支持按严重程度排序和分类。",
+          "subsections":{
+
+          }
+        },
+        {
+          "id": "3.6",
+          "name": "适应性需求",
+          "type": "content_generation",
+          "description": "适应性需求",
+          "replacement_pattern": "本条应描述关于软件将提供的与安装有关的数据",
+          "content": "本软件无需特殊的安装配置数据或适应性需求。软件以可执行文件形式提供，用户可直接运行无需复杂配置。",
+          "subsections":{
+
+          }
+        },
+        {
+          "id": "3.7",
+          "name": "安全性需求",
+          "type": "content_generation",
+          "description": "安全性需求",
+          "replacement_pattern": "本条应描述关于防止或尽可能降低对人员、财产和物理环境产生意外危险",
+          "generation_prompt": "请描述软件的安全性需求，包括：输入验证、错误处理、防护措施、数据安全",
+          "content": "编译器软件的安全性需求如下：\n\n1. 输入验证：对输入的源代码文件进行合法性检查，包括文件格式、编码方式、文件大小限制等，防止恶意或损坏的输入文件导致编译器崩溃。\n\n2. 错误处理：建立健壮的错误处理机制，当检测到错误时，编译器应能够安全地报告错误并继续运行或优雅地终止，不应因错误导致数据丢失或系统崩溃。\n\n3. 防护措施：防止缓冲区溢出、内存泄漏等编程错误，对内存分配和访问进行严格检查，避免非法内存访问。\n\n4. 数据安全：编译过程中生成的临时文件和中间结果应妥善管理，编译完成后应清理临时数据，防止敏感信息泄露。"
+        },
+        {
+          "id": "3.8",
+          "name": "保密性需求",
+          "type": "content_generation",
+          "description": "保密性需求",
+          "replacement_pattern": "本条应描述与维护保密性有关的软件需求",
+          "generation_prompt": "请描述软件的保密性需求，包括：用户权限、数据加密、审计日志、访问控制",
+          "required_aspects": ["用户权限", "数据加密", "审计日志", "访问控制"],
+          "content": "本软件为教学和研究用途的离线编译器工具，不涉及用户权限管理、数据加密、审计日志或访问控制等保密性需求。软件在本地环境运行，不处理敏感或机密数据。"
+        },
+        {
+          "id": "3.9",
+          "name": "软件环境需求",
+          "type": "content_generation",
+          "description": "运行环境需求",
+          "replacement_pattern": "本条应描述软件的运行环境需求",
+          "content": "编译器软件的运行环境需求如下：\n\n1. 操作系统：支持Windows 10及以上版本、Linux（Ubuntu 18.04及以上、CentOS 7及以上）等主流操作系统。\n\n2. 开发工具：需使用C/C++或类似编程语言开发，编译器本身需要GCC、Clang或MSVC等编译器进行构建。\n\n3. 运行库：依赖标准C/C++运行库，不依赖第三方库或框架。\n\n4. 文件系统：需要读写文件系统的权限，用于读取源代码文件和输出目标代码文件。"
+        },
+        {
+          "id": "3.10",
+          "name": "计算机资源需求",
+          "type": "content_generation",
+          "description": "硬件和软件资源需求",
+          "subsections": {
+            "3.10.1": {
+              "name": "计算机硬件需求",
+              "replacement_pattern": "本条应描述针对本软件必须使用的计算机硬件的需求",
+              "content": "处理器：x86-64架构处理器，主频1.5GHz及以上\n内存：最低512MB，推荐1GB及以上\n存储空间：需要至少100MB的磁盘空间用于安装和临时文件存储"
+            },
+            "3.10.2": {
+              "name": "计算机硬件资源使用需求",
+              "replacement_pattern": "本条应描述本软件的计算机硬件资源使用需求",
+              "content": "内存使用：编译过程中内存占用不超过500MB（对于10000行以内的源代码）\nCPU使用：编译过程中CPU占用率不超过80%，避免影响其他应用程序\n磁盘I/O：编译过程中读写操作应尽量减少磁盘I/O次数，提高编译效率"
+            },
+            "3.10.3": {
+              "name": "计算机软件需求",
+              "replacement_pattern": "本条应描述本软件必须使用或必须被并入本软件的计算机软件的需求",
+              "content": "操作系统：Windows 10+或Linux（内核版本3.0以上）\n运行库：标准C/C++运行时库\n构建工具：CMake或Make（用于编译器本身的构建）"
+            },
+            "3.10.4": {
+              "name": "计算机通信需求",
+              "replacement_pattern": "本条应描述本软件必须使用的计算机通信方面的需求",
+              "content": "本软件为离线工具，不需要网络通信功能，无计算机通信需求。"
+            }
+          }
+        },
+        {
+          "id": "3.11",
+          "name": "软件质量因素",
+          "type": "content_generation",
+          "description": "正确性、可靠性、性能、安全性等质量要求",
+          "replacement_pattern": "本条应描述合同（或软件研制任务书）规定的或由较高一级规格说明派生出的软件质量因素",
+          "content": "编译器软件的质量因素要求如下：\n\n1. 正确性：编译器必须正确地实现语言的语义，生成的目标代码必须与源代码的语义一致，通过严格的测试验证。\n\n2. 可靠性：编译器应能够稳定运行，处理各种边界情况和异常输入，错误率不超过0.1%。\n\n3. 性能：编译速度应满足要求，对于10000行以内的源代码，编译时间不超过10秒。\n\n4. 可维护性：代码结构清晰，模块化设计，便于后续维护和扩展，代码注释覆盖率不低于30%。\n\n5. 可移植性：软件应能够在不同的操作系统和硬件平台上编译和运行，遵循标准C/C++规范。\n\n6. 可用性：提供清晰的错误信息和友好的用户界面，便于用户定位和修正程序错误。"
+        },
+        {
+          "id": "3.12",
+          "name": "设计和实现约束",
+          "type": "content_generation",
+          "description": "设计约束",
+          "replacement_pattern": "本条应描述约束软件的设计和实现的那些需求",
+          "content": "本软件无特殊的设计和实现约束，开发团队可根据技术选型和设计决策进行灵活实现。"
+        },
+        {
+          "id": "3.13",
+          "name": "人员需求",
+          "type": "content_generation",
+          "description": "人员需求",
+          "replacement_pattern": "本条应描述与使用或支持本软件的人员有关的软件需求",
+          "content": "本软件为教学和研究用途，不需要特殊的人员需求或技能要求。用户需具备基本的编程知识和命令行操作能力。"
+        },
+        {
+          "id": "3.14",
+          "name": "培训需求",
+          "type": "content_generation",
+          "description": "培训需求",
+          "replacement_pattern": "本条应描述与培训有关的软件需求",
+          "content": "本软件不需要特殊的培训需求，用户可通过阅读使用手册和帮助文档快速上手。"
+        },
+        {
+          "id": "3.15",
+          "name": "软件保障需求",
+          "type": "content_generation",
+          "description": "保障需求",
+          "replacement_pattern": "本条应描述与软件保障考虑有关的软件需求",
+          "content": "本软件为教学和研究用途，不需要特殊的软件保障需求。软件提供基本的技术支持和文档说明。"
+        },
+        {
+          "id": "3.16",
+          "name": "其他需求",
+          "type": "content_generation",
+          "description": "其他需求",
+          "replacement_pattern": "本条应描述上述各条未能覆盖的其他软件需求",
+          "content": "无其他特殊需求。"
+        },
+        {
+          "id": "3.17",
+          "name": "验收、交付和包装需求",
+          "type": "content_generation",
+          "description": "验收交付",
+          "replacement_pattern": "本条应描述为了交付而对软件进行包装、加标记和处理",
+          "default_content": "软件以安装包形式交付，包含可执行程序、源代码、技术文档和用户手册。",
+          "content": "软件以安装包形式交付，包含可执行程序、源代码、技术文档和用户手册。"
+        },
+        {
+          "id": "3.18",
+          "name": "需求的优先顺序和关键程度",
+          "type": "text_generation",
+          "description": "优先级",
+          "replacement_pattern": "本条（若适用）应描述本文档中诸需求的优先顺序",
+          "default_content": "所有功能需求优先级相同，安全性需求和保密性需求为关键需求，需优先满足。",
+          "content": "所有功能需求优先级相同，安全性需求和保密性需求为关键需求，需优先满足。"
+        }
+      ]
+    },
+    "4": {
+      "title": "合格性规定",
+      "type": "content_generation",
+      "description": "需求验证方法",
+      "replacement_pattern": "本条应描述所定义的合格性方法",
+      "content": "Test table",
+      "tables": [
+        {
+          "table_id": "qualification_requirements",
+          "locator_rows": [
+            ["需求名称", "需求的唯一标识", "本文档中的章节号", "合格性方法", "合格性级别"]
+          ],
+          "data_start_row": 1,
+          "preserve_tail_rows": 1,
+          "columns": ["requirement_name", "requirement_id", "chapter_number", "method", "level"],
+          "rows": [
+            {
+              "requirement_name": "《GB/T 0028》",
+              "requirement_id": "0028",
+              "chapter_number": "3.3.1",
+              "method": "合规性方法",
+              "level": "合规性级别"
+            },
+            {
+              "requirement_name": "《GB/T 0028》",
+              "requirement_id": "0028",
+              "chapter_number": "3.3.1",
+              "method": "合规性方法",
+              "level": "合规性级别"
+            },
+            {
+              "requirement_name": "《GB/T 0028》",
+              "requirement_id": "0028",
+              "chapter_number": "3.3.1",
+              "method": "合规性方法",
+              "level": "合规性级别"
+            },
+            {
+              "requirement_name": "《GB/T 0028》",
+              "requirement_id": "0028",
+              "chapter_number": "3.3.1",
+              "method": "合规性方法",
+              "level": "合规性级别"
+            }
+          ]
+        }
+      ]
+    },
+    "5": {
+      "title": "需求可追踪性",
+      "type": "content_generation",
+      "description": "",
+      "replacement_pattern": "本章应描述需求与系统需求、设计元素、测试用例之间的追踪关系，确保每个需求都能追溯到其来源和验证方法。",
+      "content": "Test table",
+      "tables": [
+        {
+          "table_id": "forward_traceability",
+          "locator_rows": [
+            ["《XXX课题可行性研究报告》中的指标", "《XXX课题可行性研究报告》中的指标", "软件需求", "软件需求"],
+            ["指标内容", "章节号", "需求名称", "章节号"]
+          ],
+          "data_start_row": 2,
+          "preserve_tail_rows": 2,
+          "columns": ["source_indicator_content", "source_chapter_number", "requirement_name", "requirement_chapter_number"],
+          "rows": [
+            {
+              "source_indicator_content": "指标内容",
+              "source_chapter_number": "章节号",
+              "requirement_name": "需求名称",
+              "requirement_chapter_number": "章节号"
+            },
+            {
+              "source_indicator_content": "指标内容",
+              "source_chapter_number": "章节号",
+              "requirement_name": "需求名称",
+              "requirement_chapter_number": "章节号"
+            },
+            {
+              "source_indicator_content": "指标内容",
+              "source_chapter_number": "章节号",
+              "requirement_name": "需求名称",
+              "requirement_chapter_number": "章节号"
+            }
+          ]
+        },
+        {
+          "table_id": "reverse_traceability",
+          "locator_rows": [
+            ["软件需求", "软件需求", "《XXXXX课题可行性研究报告》中的指标", "《XXXXX课题可行性研究报告》中的指标"],
+            ["需求名称", "指标内容", "指标内容", "章节号"]
+          ],
+          "data_start_row": 2,
+          "preserve_tail_rows": 0,
+          "columns": ["requirement_name", "requirement_indicator_content", "source_indicator_content", "source_chapter_number"],
+          "rows": [
+            {
+              "requirement_name": "需求名称",
+              "requirement_indicator_content": "指标内容",
+              "source_indicator_content": "指标内容",
+              "source_chapter_number": "章节号"
+            },
+            {
+              "requirement_name": "需求名称",
+              "requirement_indicator_content": "指标内容",
+              "source_indicator_content": "指标内容",
+              "source_chapter_number": "章节号"
+            },
+            {
+              "requirement_name": "需求名称",
+              "requirement_indicator_content": "指标内容",
+              "source_indicator_content": "指标内容",
+              "source_chapter_number": "章节号"
+            }
+          ]
+        }
+      ]
+    },
+    "6": {
+      "title": "注释",
+      "type": "content_generation",
+      "description": "术语和缩略语",
+      "replacement_pattern": "本章应包括有助于了解文档的所有信息",
+      "generation_prompt": "请列出本文档中的术语定义和缩略语表",
+      "required_aspects": ["术语", "缩略语"],
+      "content": "术语定义：\n\n编译器（Compiler）：将高级编程语言源代码转换为目标代码的软件工具。\n词法分析（Lexical Analysis）：将源代码字符流分解为记号序列的过程。\n语法分析（Syntax Analysis）：根据语法规则分析记号序列，构建抽象语法树的过程。\n语义分析（Semantic Analysis）：检查程序的语义正确性，包括类型检查和作用域分析。\n抽象语法树（Abstract Syntax Tree, AST）：源程序的树形表示，每个节点代表一个语法成分。\n符号表（Symbol Table）：存储标识符信息的数据结构。\n中间代码（Intermediate Code）：源代码与目标代码之间的中间表示形式。\n代码优化（Code Optimization）：改进代码性能的过程，不改变程序语义。\n\n缩略语：\n\nAST - Abstract Syntax Tree（抽象语法树）\nSRS - Software Requirements Specification（软件需求规格说明）\nBYQ - 编译器（Bian Yi Qi）\nSSA - Static Single Assignment（静态单赋值）"
+    }
+  }
+}
