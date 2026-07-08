@@ -3,14 +3,14 @@
   "name": "gjb438c-tools",
   "description": "GJB 438C 军用软件文档自动填写工具集 Marketplace",
   "owner": {
-    "name": "SRS-Tool"
+    "name": "GJB438C-DocSkill"
   },
   "plugins": [
     {
       "name": "gjb438c-doc-filler",
       "description": "GJB 438C 文档填写工具 — 支持软件需求规格说明书 [5.10] 和软件设计说明书 [5.11] 模板",
       "author": {
-        "name": "SRS-Tool"
+        "name": "GJB438C-DocSkill"
       },
       "category": "productivity",
       "source": {

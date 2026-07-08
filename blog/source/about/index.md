@@ -10,8 +10,8 @@ date: 2026-06-11 12:00:00
 
 | 序号 | 文档类型 | 状态 |
 |:---:|:---|:---:|
-| 08 | 软件需求规格说明书 (SRS) | 已支持 |
-| 10 | 软件概要设计说明书 (SDD) | 已支持 |
+| 10 | 软件需求规格说明书 (SRS) | 已支持 |
+| 11 | 软件设计说明书 (SDD) | 已支持 |
 | 12 | 软件详细设计说明 (SDD-Detail) | 计划中 |
 | 09 | 接口需求规格说明 (IRS) | 计划中 |
 | 13 | 软件接口设计说明 (IDD) | 计划中 |
@@ -40,8 +40,8 @@ claude plugin add CMoments/GJB438C-DocSkill
 
 | 触发关键词 | 触发 Skill |
 |:---|:---|
-| `438C` `需求规格说明` `SRS` `软件需求` | [08] 软件需求规格说明书 |
-| `概要设计` `SDD` `设计说明` `概要设计说明` | [10] 软件概要设计说明书 |
+| `438C` `需求规格说明` `SRS` `软件需求` | [10] 软件需求规格说明书 |
+| `概要设计` `SDD` `设计说明` `概要设计说明` | [11] 软件设计说明书 |
 
 示例：
 
@@ -58,13 +58,13 @@ GJB438C-DocSkill/
 │   ├── plugin.json              # 插件清单
 │   └── marketplace.json         # Marketplace 注册表
 ├── skills/
-│   ├── word-fillter-438c-08/    # [08] 软件需求规格说明书
+│   ├── word-fillter-438c-srs/    # [10] 软件需求规格说明书
 │   │   ├── SKILL.md             # Skill 定义
 │   │   ├── documents/           # 模板 .docx
 │   │   ├── templates/           # config.json + project.json
 │   │   └── scripts/             # Python 填写引擎
 │   │       └── strict_word_filler/  # 核心引擎
-│   └── word-fillter-438c-10/    # [10] 软件概要设计说明书
+│   └── word-fillter-438c-sdd/    # [11] 软件设计说明书
 ├── demo/                        # 示例输出文档
 └── GJB438C全套模版/             # GJB 438C 标准全部模板
 ```
@@ -76,7 +76,7 @@ GJB438C-DocSkill/
 - **精确替换** (ExactReplaceRule)：封面信息精确匹配
 - **段落替换** (ParagraphReplaceRule)：锚点文本定位，格式保持
 - **动态章节** (DynamicSectionRule)：克隆原型段落，生成可变子节
-- **CSCI 章节** (CSCISectionRule)：[10] 专属，自动组织 CSCI 块
+- **CSCI 章节** (CSCISectionRule)：[11] 专属，自动组织 CSCI 块
 - **表格填充** (TableFillRule)：按 locator_rows 匹配，自动插入数据行
 - **图表编号**：自动更新 表X-X / 图X-X
 - **目录标记**：设置 updateFields，Word 打开时自动刷新

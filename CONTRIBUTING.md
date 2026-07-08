@@ -8,7 +8,7 @@
 
 提交 Issue 时请包含：
 
-- 使用的 Skill（[08] / [10]）和触发方式
+- 使用的 Skill（[10] / [11]）和触发方式
 - 输入的项目描述或 JSON 配置
 - 期望行为与实际行为
 - 控制台报错信息（如有）
@@ -62,7 +62,7 @@ skills/
 
 3. **编写 SKILL.md**
 
-   参照 `skills/word-fillter-438c-08/SKILL.md` 的格式，包含：
+   参照 `skills/word-fillter-438c-srs/SKILL.md` 的格式，包含：
    - frontmatter 中的 `name` 和 `description`（含触发关键词）
    - 约束条件
    - 工作流说明
@@ -160,7 +160,7 @@ type 取值：
 
 ```
 feat: 新增 [09] 接口需求规格说明 Skill
-fix: [08] 修正引用文档表 locator_rows 匹配
+fix: [10] 修正引用文档表 locator_rows 匹配
 docs: 补充动态章节的使用说明
 ```
 

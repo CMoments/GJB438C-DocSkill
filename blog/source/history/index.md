@@ -16,7 +16,7 @@ date: 2026-06-11 12:00:00
 项目从独立脚本演进为 Claude Code 插件：
 
 - 注册为 Claude Code Plugin（`.claude-plugin/plugin.json`）
-- 新增 [10] 软件概要设计说明书 (SDD) Skill
+- 新增 [11] 软件设计说明书 (SDD) Skill
 - SDD Skill 引入 `CSCISectionRule`，支持 CSCI 体系结构块自动组织
 - `_actual_row_cells()` 处理合并单元格，清除多余数据行
 - 两个 Skill 共享 `strict_word_filler/` 核心引擎
@@ -36,7 +36,7 @@ date: 2026-06-11 12:00:00
 ## 2026-02 — 初始版本
 
 - 基于 Claude Code Skill 的 Word 文档自动填写工具
-- 支持 [08] 软件需求规格说明书 (SRS)
+- 支持 [10] 软件需求规格说明书 (SRS)
 - 交互式问答收集项目信息 → 生成 config.json + project.json → python-docx 填充模板
 - 通过 `AskUserQuestion` 工具引导用户完成需求收集
 - 支持动态章节（3.2.X 软件能力需求等可变数量子节）
@@ -47,10 +47,10 @@ date: 2026-06-11 12:00:00
 ```
 v1.0 (2026-02)                v2.0 (2026-03)                v3.0 (2026-05)
 ┌─────────────────┐          ┌─────────────────┐          ┌─────────────────┐
-│ 单 Skill [08]    │          │ strict 引擎重构  │          │ Plugin + 双 Skill│
+│ 单 Skill [10]    │          │ strict 引擎重构  │          │ Plugin + 双 Skill│
 │                 │    ──►   │                 │    ──►   │                 │
-│ doc_fill.py     │          │ BuildPlan 模式   │          │ [08] SRS        │
-│ find_and_rep.py │          │ frozen dataclass │          │ [10] SDD        │
+│ doc_fill.py     │          │ BuildPlan 模式   │          │ [10] SRS        │
+│ find_and_rep.py │          │ frozen dataclass │          │ [11] SDD        │
 │ dynamic_proc.py │          │ 严格模式校验     │          │ CSCISectionRule │
 │ validate.py     │          │ template_rules   │          │ Claude Plugin   │
 └─────────────────┘          └─────────────────┘          └─────────────────┘
